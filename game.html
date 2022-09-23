@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getComputerChoice(){
+            let choice = Math.floor(Math.random() * 100);
+            if(choice<=33 && choice>=0){
+                choice = "rock";
+                console.log("Rock");
+            }
+            else if(choice<=66 && choice>=34){
+                choice = "paper";
+                console.log("Paper");
+            }
+            else if(choice<=100 && choice>=67){
+                choice = "scissors";
+                console.log("Scissors");
+            }
+
+            return choice;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
