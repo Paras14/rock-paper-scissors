@@ -10,6 +10,14 @@
             text-align: center;
             padding: 100px;
         }
+
+        #result-display{
+            padding: 50px;
+            color: darkgoldenrod;
+            font-size: 44px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 40px;
+        }
     </style>
 </head>
 <body>
@@ -18,6 +26,9 @@
         <button class="btn" id="rock">Rock</button>
         <button class="btn" id="paper">Paper</button>
         <button class="btn" id="scissors">Scissors</button>
+        <div id="result-display">
+
+        </div>
     </div>
 </body>
 <script>
@@ -61,25 +72,29 @@
     }
 
     function game(){
-        let finalResultPlayer = 0;
-        let finalResultComputer = 0;
+        // let finalResultPlayer = 0;
+        // let finalResultComputer = 0;
         // for(let i = 0; i<5 ; i++){
         // }  = prompt("Select your choice, type \"rock\" \"paper\" \"scissors\"");
         let result = playRound(choice, getComputerChoice());
+        let resultPrint = document.getElementById('result-display');
         if(result == 2){
-        console.log("You Win!");
-        finalResultPlayer++;
+            resultPrint.innerHTML = 'You Win!';
+            // console.log("You Win!");
+        // finalResultPlayer++;
         }
         else if(result == 1){
-        console.log("Round draw");
+            resultPrint.innerHTML = 'Round draw';
+            // console.log("Round draw");
         }
         else if(result == 0){
-        console.log("You Lose");
-        finalResultComputer++;
+            resultPrint.innerHTML = 'You Lose';
+            // console.log("You Lose");
+        // finalResultComputer++;
         }
 
-        console.log("Final Result:- \n Your wins: "+finalResultPlayer+" v/s Computer wins: "+finalResultComputer);
-        if(finalResultPlayer == finalResultComputer){
+        // console.log("Final Result:- \n Your wins: "+finalResultPlayer+" v/s Computer wins: "+finalResultComputer);
+        /*if(finalResultPlayer == finalResultComputer){
             console.log("Match Draw");
         }
         else if(finalResultPlayer > finalResultComputer){
@@ -87,7 +102,7 @@
         }
         else if(finalResultComputer > finalResultPlayer){
             console.log("You've lost the Match");
-        }
+        }*/
     }
 </script>
 </html>
